@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User information</title>
+    <div th:replace="~{fragments/links::css}"></div>
+    <link rel="stylesheet" href="/css/personal-data.css">
+</head>
+<body>
+    <div class="container">
+        <div th:replace="~{fragments/navbar::navbar}"></div>
+        <div th:replace="~{fragments/breadcrumb::breadcrumb('Personal data')}"></div>
+
+        <div class="section-main">
+            <div class="panel-nav" id="scroll-spy">
+                <div class="user-head" th:if="${user != null}">
+                    <span class="user-icon"></span>
+                    <h3 class="name" th:text="${user.username}"></h3>
+                </div>
+                <div class="scroll-element personal-data">
+                    <span class="personal-data-icon"></span>
+                    <a href="#personal-data" onclick="showView('personal', 'personal-data')" id="personal" class="panel-btn personal-data-btn">Personal Data</a>
+                </div>
+                <div class="scroll-element payments">
+                    <span class="payment-icon"></span>
+                    <a href="#payments" onclick="showView('payment', 'payments')" id="payment" class="panel-btn payments-btn">Payment & Instalments</a>
+                </div>
+                <div class="scroll-element orders">
+                    <span class="order-icon"></span>
+                    <a href="" class="panel-btn orders-btn">Orders</a>
+                </div>
+                <div class="scroll-element wish-list">
+                    <span class="wish-icon"></span>
+                    <a href="" class="panel-btn wish-list-btn">Wish List</a>
+                </div>
+                <div class="scroll-element discounts">
+                    <span class="discounts-icon"></span>
+                    <a href="" class="panel-btn discounts-btn">Discounts</a>
+                </div>
+                <div class="scroll-element security">
+                    <span class="security-icon"></span>
+                    <a href="" class="panel-btn security-btn">Payment & Instalments</a>
+                </div>
+                <div class="scroll-element notification">
+                    <span class="notification-icon"></span>
+                    <a href="" class="panel-btn notification-btn">Notification</a>
+                </div>
+                <div class="scroll-element contact">
+                    <span class="contact-icon"></span>
+                    <a href="" class="panel-btn contact-btn">Contact us</a>
+                </div>
+                <div class="scroll-element logout">
+                    <span class="logout-icon"></span>
+                    <a href="" class="panel-btn logout-btn">Logout</a>
+                </div>
+            </div>
+
+            <div class="view">
+                <div class="scroll" data-bs-spy="scroll" data-bs-target="#scroll-spy" data-bs-offset="0"
+                data-bs-smooth-scroll="true" tabindex="0">
+                    <div id="personal-data" style="display:none;">
+                        <h1>Identification</h1>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad alias aliquam amet at consectetur earum, enim eos expedita fugit id ipsum libero, mollitia nemo obcaecati rem vero. Mollitia, voluptates.</div>
+                    </div>
+                    <div id="payments" style="display:none;">
+                        <h2>Payments</h2>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolores dolorum ea eius enim, id illo maxime molestiae necessitatibus quasi sed, unde? Consequuntur ipsam magni, possimus provident quisquam sit tempora!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div th:replace="~{fragments/links::js}"></div>
+    <script src="/js/personal-data.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+.navbar{
+    background-color: darkgray;
+    justify-content: space-between;
+}
+
+.logo{
+
+    width: 56px;
+    height: 63px;
+}
+
+.info-email{
+    font-size: 12px;
+}
+.info-username{
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+
+.icon{
+    display: inline-block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.icon-user{
+    background-image: url("/images/profile-circle.svg");
+}
+
+.icon-orders{
+    background-image: url("/images/bag.svg");
+}
+
+.icon-wish{
+    background-image: url("/images/heart.svg");
+}
+
+.icon-payments{
+    background-image: url("/images/payment.svg");
+}
+
+.icon-logout{
+    background-image: url("/images/logout.svg");
+    margin-right: 2px;
+}
+
+.dropdown-item{
+    display: flex;
+    align-items: start;
+}
+
+.logout-btn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+
+.profile-btn, .profile-btn-d{
+    background-color: transparent;
+    background-image: url("/images/user-login.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+
+}
+
+.profile-btn-d{
+    background-image: url("/images/profile-circle.svg");
+    width: 30px;
+    height: 30px;
+}
+
+.right-nav-el{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.right-nav-el-icon{
+    display: inline-block;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+.search-btn{
+    background-image: url("/images/search.svg");
+    margin-right: 10px;
+}
+
+.order-btn{
+    background-image: url("/images/order-btn.svg");
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}

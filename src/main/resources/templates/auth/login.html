@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
+</head>
+<body>
+    <form action="/process_url" method="post" class="modal-body">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" class="form-control mb-3">
+        <!--    <div  style="color:red" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div>-->
+        <br>
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" class="form-control">
+        <br>
+        <div style="color:red" th:if="${param.error}" >
+            Неправильное имя или пароль
+        </div>
+
+        <input type="submit" name="" id="" value="Войти" class="btn btn-primary ">
+
+
+    </form>
+
+    <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.min.js}"></script>
+</body>
+</html>

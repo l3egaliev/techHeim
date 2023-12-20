@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="/css/authentication.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="icon" th:replace="~{fragments/favicon::favicon}" href="">
+</head>
+<body>
+        <div class="container-lg">
+            <div th:replace="~{fragments/navbar::navbar}"></div>
+            <div th:replace="~{fragments/modal-login::modal_login}"></div>
+
+            <div th:replace="~{fragments/breadcrumb::breadcrumb('Products')}"></div>
+
+            <ul class="nav category-nav justify-content-center">
+                <li class="nav-item tab-items">
+                    <span class="product-icon icon-mobile "></span>
+                    <a class="text-decoration-none nav-link tab-link" id="phones" onclick="sortByCategory('phones')"  aria-current="page" href="#">
+                        Mobile
+                    </a>
+                </li>
+
+                <li class="nav-item tab-items">
+                    <span class="product-icon icon-laptop "></span>
+                    <a class="text-decoration-none nav-link tab-link" id="computers" onclick="sortByCategory('computers')" aria-current="page" href="#">
+                        Laptop
+                    </a>
+                </li>
+
+                <li class="nav-item tab-items">
+                    <span class="product-icon icon-tablet "></span>
+                    <a class="text-decoration-none nav-link text-center tab-link" id="tablets" onclick="sortByCategory('tablets')"
+                       aria-current="page" href="#">
+                        Tablet
+                    </a>
+                </li>
+
+                <li class="nav-item tab-items">
+                    <span class="product-icon icon-audio "></span>
+                    <a class="text-decoration-none nav-link tab-link" id="audio" onclick="sortByCategory('audio')"  aria-current="page" href="#">
+                        Audio
+                    </a>
+                </li>
+
+                <li class="nav-item tab-items">
+                    <span class="product-icon icon-wearable "></span>
+                    <a class="text-decoration-none nav-link tab-link" aria-current="page" id="wearable" onclick="sortByCategory('wearable')"  href="#">
+                        Wearable
+                    </a>
+                </li>
+
+                <li class="nav-item tab-items">
+                    <span class="product-icon icon-camera"></span>
+                    <a class="text-decoration-none nav-link tab-link" id="cameras" onclick="sortByCategory('cameras')"  aria-current="page" href="#">
+                        Camera
+                    </a>
+                </li>
+
+                <li class="nav-item tab-items">
+                    <span class="product-icon icon-gaming " ></span>
+                    <a class="text-decoration-none nav-link tab-link" id="gaming" onclick="sortByCategory('gaming')"  aria-current="page" href="#">
+                        Gaming
+                    </a>
+                </li>
+
+                <li class="nav-item tab-items">
+                    <span class="product-icon icon-network "></span>
+                    <a class="text-decoration-none nav-link tab-link" id="networking" onclick="sortByCategory('networking')"  aria-current="page" href="#">
+                        Network
+                    </a>
+                </li>
+
+                <li class="nav-item tab-items">
+                    <span class="product-icon icon-accessories"></span>
+                    <a class="text-decoration-none nav-link  tab-link" id="accessories" onclick="sortByCategory('accessories')"  aria-current="page" href="#">
+                        Accessories
+                    </a>
+                </li>
+            </ul>
+
+            <div class="section-main">
+                <div class="filters">
+                    <div class="filter-head">
+                        <h4>Filters</h4>
+                        <buttot id="clean-filter">Clear all</buttot>
+                    </div>
+
+
+                </div>
+
+                <div class="products">
+                    <!--                <div class="product card" style="width: 18rem; display: none">-->
+                    <!--                    <img src="" class="card-img-top" alt="...">-->
+                    <!--                    <div class="card-body">-->
+                    <!--                        <h5 class="card-title" ></h5>-->
+                    <!--                        <a href="#" class="btn btn-primary">Add to card</a>-->
+                    <!--                    </div>-->
+                    <!--                </div>&ndash;&gt;-->
+                </div>
+            </div>
+
+
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.min.js}"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/product.js"></script>
+</body>
+</html>

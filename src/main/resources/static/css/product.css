@@ -1,0 +1,110 @@
+.category-nav{
+    justify-content: center;
+    align-items: start;
+}
+
+
+.product-icon{
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin: 0 0 0 16px;
+}
+
+.icon-mobile{
+    background-image: url("/images/mobile.svg");
+}
+
+.icon-laptop{
+    background-image: url("/images/monitor.svg");
+}
+.icon-tablet {
+    background-image: url("/images/tablet.svg");
+}
+
+.icon-audio{
+    background-image: url("/images/headphones.svg");
+}
+
+.icon-wearable{
+    background-image: url("/images/watchs.svg");
+}
+
+.icon-network{
+    background-image: url("/images/network.svg");
+}
+
+.icon-camera{
+    background-image: url("/images/camera.svg");
+}
+
+.icon-gaming{
+    background-image: url("/images/game.svg");
+}
+
+.icon-accessories{
+    background-image: url("/images/devices.svg");
+    margin-left: 25px;
+}
+
+
+.tab-link{
+    color: #444;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    margin-top: 50px;
+}
+
+.product{
+    margin:0 25px 25px 0;
+}
+
+.tab-items:not(:last-child){
+    margin-right: 25px;
+}
+
+.price{
+    color: #5252D9FF;
+}
+
+.card-title{
+    color: #0c0c0c;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.section-main{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.filters{
+    margin-right: 40px;
+    min-width: 200px;
+}
+
+.filter-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: content-box;
+}
+
+#clean-filter{
+    margin-left: 20px;
+    font-size: 16px;
+    color: #0C68F4;
+    cursor: pointer;
+}

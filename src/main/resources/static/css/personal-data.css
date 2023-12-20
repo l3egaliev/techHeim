@@ -1,0 +1,34 @@
+
+.section-main{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.panel-nav{
+    margin-right: 50px;
+}
+
+.user-head{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+
+
+.user-icon{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-image: url("/images/user-icon.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    margin-right: 16px;
+}
+
+.name{
+    font-size: 20px;
+}

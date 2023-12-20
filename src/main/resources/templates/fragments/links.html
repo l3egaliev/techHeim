@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Head</title>
+    <div class="css" th:fragment="css">
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
+        <link rel="stylesheet" href="/css/authentication.css">
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="icon" th:replace="~{fragments/favicon::favicon}" href="">
+    </div>
+</head>
+<body>
+
+    <div th:fragment="js">
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.min.js}"></script>
+        <script src="/js/main.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">-->
+</head>
+<body>
+
+  <div th:fragment="navbar">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+          <a href="#">
+              <img src="/images/logo.svg" alt="Logo" class="logo">
+          </a>
+          <ul class="nav justify-content-center nav-underline">
+              <li class="nav-item">
+                  <a class="nav-link" id="home" aria-current="page" th:href="@{/home}">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a th:href="@{/products}" id="products" class="nav-link">Products</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="blog" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="faq" href="#">FAQ</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="contact" href="#">Contact us</a>
+              </li>
+          </ul>
+
+          <!--                <div class="">-->
+          <!--                    <form class="d-flex" role="search">-->
+          <!--                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">-->
+          <!--                        <button class="btn btn-outline-success" type="submit">Поиск</button>-->
+          <!--                    </form>-->
+          <!--                </div>-->
+          <div class="right-nav-el">
+              <button type="button" class="search-btn right-nav-el-icon"></button>
+              <button type="button" class="order-btn right-nav-el-icon"></button>
+              <button type="button" class="btn profile-btn" id="loginBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-bs-whatever="@mdo"></button>
+              <div class="dropdown" style="display: none">
+                  <a class="btn profile-btn-d" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"></a>
+
+                  <ul class="dropdown-menu dropdown-menu-lg-end">
+                      <li class="dropdown-item mb-3">
+                          <span class="icon-user icon"></span>
+                          <div class="user-info">
+                              <a th:href="@{/user}" class="info-username text-black d-block link-primary fs-6" id="val"></a>
+                              <span class="d-block info-email" ></span>
+                          </div>
+                      </li>
+                      <li class="dropdown-item">
+                          <span class="icon-orders icon"></span>
+                          <div class="orders">
+                              <a href="#" class="fs-6 text-black">Orders</a>
+                          </div>
+                      </li>
+
+                      <li class="dropdown-item">
+                          <span class="icon-wish icon"></span>
+                          <div class="wish">
+                              <a href="#" class="fs-6 text-black">Wish List</a>
+                          </div>
+                      </li>
+
+                      <li class="dropdown-item">
+                          <span class="icon-payments icon"></span>
+                          <div class="payments">
+                              <a href="#" class="fs-6 text-black">Payments</a>
+                          </div>
+                      </li>
+
+
+                      <li><hr class="dropdown-divider"></li>
+                      <li class="dropdown-item">
+                          <span class="icon icon-logout"></span>
+                          <form th:action="@{/logout}" class="" th:method="post">
+                              <button type="submit" class="fs-6 logout-btn" >Выйти</button>
+                          </form>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+
+
+      </nav>
+  </div>
+
+
+<!--  <script src="https://unpkg.com/@popperjs/core@2"></script>-->
+<!--  <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.min.js}"></script>-->
+<!--  <script src="/js/main.js"></script>-->
+</body>
+</html>
