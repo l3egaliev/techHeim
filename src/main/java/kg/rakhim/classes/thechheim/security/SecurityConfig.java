@@ -8,6 +8,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -36,6 +37,14 @@ public class SecurityConfig {
                         .requestMatchers("/images/**").permitAll()
                         .requestMatchers("/webjars/**").permitAll()
                         .anyRequest().authenticated())
+                .rememberMe(r -> r.tokenValiditySeconds(86400)
+                        .key("JustKey")
+                        .rememberMeParameter("remember-me")
+                        .userDetailsService(userDetailsService))
+                .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
+                        .maximumSessions(1)
+                        .expiredUrl("/login?expired")
+                        .maxSessionsPreventsLogin(false))
                 .formLogin(form -> form.loginPage("/login")
                         .loginProcessingUrl("/process_url")
                         .defaultSuccessUrl("/home", true)

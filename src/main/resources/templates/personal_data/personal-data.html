@@ -10,6 +10,8 @@
     <div class="container">
         <div th:replace="~{fragments/navbar::navbar}"></div>
         <div th:replace="~{fragments/breadcrumb::breadcrumb('Personal data')}"></div>
+        <div th:replace="~{fragments/modal-userInfo::modal_username}"></div>
+        <div th:replace="~{fragments/modal-userInfo::modal_email}"></div>
 
         <div class="section-main">
             <div class="panel-nav" id="scroll-spy">
@@ -18,39 +20,39 @@
                     <h3 class="name" th:text="${user.username}"></h3>
                 </div>
                 <div class="scroll-element personal-data">
-                    <span class="personal-data-icon"></span>
-                    <a href="#personal-data" onclick="showView('personal', 'personal-data')" id="personal" class="panel-btn personal-data-btn">Personal Data</a>
+                    <span class="panel-icon personal-data-icon panel-icon-active"></span>
+                    <a href="#personal-data" onclick="showView('personal', 'personal-data', 'personal-data-icon')" id="personal" class="panel-btn personal-data-btn">Personal Data</a>
                 </div>
                 <div class="scroll-element payments">
-                    <span class="payment-icon"></span>
-                    <a href="#payments" onclick="showView('payment', 'payments')" id="payment" class="panel-btn payments-btn">Payment & Instalments</a>
+                    <span class="panel-icon payment-icon"></span>
+                    <a href="#payments" onclick="showView('payment', 'payments', 'payment-icon')" id="payment" class="panel-btn payments-btn">Payment & Instalments</a>
                 </div>
                 <div class="scroll-element orders">
-                    <span class="order-icon"></span>
+                    <span class="panel-icon order-icon"></span>
                     <a href="" class="panel-btn orders-btn">Orders</a>
                 </div>
                 <div class="scroll-element wish-list">
-                    <span class="wish-icon"></span>
+                    <span class="panel-icon wish-icon"></span>
                     <a href="" class="panel-btn wish-list-btn">Wish List</a>
                 </div>
                 <div class="scroll-element discounts">
-                    <span class="discounts-icon"></span>
+                    <span class="panel-icon discounts-icon"></span>
                     <a href="" class="panel-btn discounts-btn">Discounts</a>
                 </div>
                 <div class="scroll-element security">
-                    <span class="security-icon"></span>
-                    <a href="" class="panel-btn security-btn">Payment & Instalments</a>
+                    <span class="panel-icon security-icon"></span>
+                    <a href="" class="panel-btn security-btn">Security & access</a>
                 </div>
                 <div class="scroll-element notification">
-                    <span class="notification-icon"></span>
+                    <span class="panel-icon notification-icon"></span>
                     <a href="" class="panel-btn notification-btn">Notification</a>
                 </div>
                 <div class="scroll-element contact">
-                    <span class="contact-icon"></span>
+                    <span class="panel-icon contact-icon"></span>
                     <a href="" class="panel-btn contact-btn">Contact us</a>
                 </div>
                 <div class="scroll-element logout">
-                    <span class="logout-icon"></span>
+                    <span class="panel-icon logout-icon"></span>
                     <a href="" class="panel-btn logout-btn">Logout</a>
                 </div>
             </div>
@@ -58,9 +60,28 @@
             <div class="view">
                 <div class="scroll" data-bs-spy="scroll" data-bs-target="#scroll-spy" data-bs-offset="0"
                 data-bs-smooth-scroll="true" tabindex="0">
-                    <div id="personal-data" style="display:none;">
+                    <div id="personal-data" style="display:block;" th:if="${user != null}">
                         <h1>Identification</h1>
-                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad alias aliquam amet at consectetur earum, enim eos expedita fugit id ipsum libero, mollitia nemo obcaecati rem vero. Mollitia, voluptates.</div>
+                        <p style="color: #717171; font-size: 16px; margin-bottom: 25px">Verify your identity</p>
+                        <div class="edit">
+                            <div id="edit-username" class="">
+                                <label for="user-name" class="labels">Username</label>
+                                <div id="user-name" class="edit-username">
+                                    <span class="edit-username-icon"></span>
+                                    <span class="edit-username-text" th:text="${user.username}"></span>
+                                    <button type="button" class="btn edit-username-btn" id="editUsernameBtn" data-bs-toggle="modal" data-bs-target="#edit-username"></button>
+                                </div>
+                           </div>
+
+                           <div id="edit-email" class="">
+                               <label for="user-email" class="labels">E-mail Address</label>
+                               <div id="user-email" class="edit-email">
+                                   <span class="edit-email-icon"></span>
+                                   <span class="edit-email-text" th:text="${user.email}">email</span>
+                                   <button type="button" class="btn edit-email-btn" id="editEmailBtn" data-bs-toggle="modal" data-bs-target="#edit-email"></button>
+                               </div>
+                           </div>
+                       </div>
                     </div>
                     <div id="payments" style="display:none;">
                         <h2>Payments</h2>

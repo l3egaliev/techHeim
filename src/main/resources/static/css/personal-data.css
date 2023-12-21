@@ -1,4 +1,8 @@
 
+a{
+    text-decoration: none;
+}
+
 .section-main{
     display: flex;
     align-items: start;
@@ -7,12 +11,16 @@
 
 .panel-nav{
     margin-right: 50px;
+    min-width: 250px;
+    background-color: #F6F6F6;
+    padding: 10px 10px;
 }
 
 .user-head{
     display: flex;
     align-items: center;
     justify-content: start;
+    margin-bottom: 24px;
 }
 
 
@@ -31,4 +39,144 @@
 
 .name{
     font-size: 20px;
+}
+.scroll-element{
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.scroll-element:not(:last-child){
+    margin-bottom: 24px;
+}
+
+.panel-btn{
+    color: #0c0c0c;
+    position: relative;
+}
+
+.panel-icon{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin-right: 16px;
+}
+
+.personal-data-icon{
+    background-image: url("/images/user-edit.svg");
+}
+
+.payment-icon{
+    background-image: url("/images/payment.svg");
+}
+
+.order-icon{
+    background-image: url("/images/bag.svg");
+}
+
+.wish-icon{
+    background-image: url("/images/heart.svg");
+}
+
+.discounts-icon{
+    background-image: url("/images/gift.svg");
+}
+
+.security-icon{
+    background-image: url("/images/security-safe.svg");
+}
+
+.contact-icon{
+    background-image: url("/images/24-support.svg");
+}
+
+.notification-icon{
+    background-image: url("/images/notification.svg");
+}
+
+.logout-icon{
+    background-image: url("/images/logout.svg");
+}
+
+
+.active{
+    color: #0C68F4;
+}
+
+.edit{
+    display: flex;
+}
+
+.edit-username, .edit-email{
+    display: flex;
+    align-items: center;
+    background-color: #F6F6F6;
+    padding: 24px 16px;
+    border-radius: 5px;
+}
+
+.edit-username{
+    margin-right: 25px;
+}
+
+.labels{
+    display: block;
+    color: #717171;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.edit-username-icon, .edit-email-icon, .edit-username-btn, .edit-email-btn{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+.edit-email-icon{
+    background-image: url("/images/email.svg");
+}
+.edit-username-icon{
+    background-image: url("/images/profile.svg");
+}
+
+.edit-username-btn, .edit-email-btn{
+    background-image: url("/images/edit-btn.svg");
+    margin-right: 0px;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-username-text, .edit-email-text{
+    margin-right: 150px;
+    color: #717171;
+}
+
+.panel-icon-active::before{
+    content: '';
+    display: inline-block;
+    background-color: #0C68F4;
+    width: 2px;
+    height: 45px;
+    top: -8px;
+    position: absolute;
+    left: -25px;
+}
+
+.modal-title{
+    margin: 0;
+}
+
+.btn-close{
+    right: 10px;
+    margin-top: 10px;
 }

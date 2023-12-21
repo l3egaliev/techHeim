@@ -23,4 +23,18 @@ public class UserService {
     }
 
     public Optional<User> findByEmail(String email) {return repository.findByEmail(email);}
+
+    @Transactional
+    public void updateUsername(String oldUsername, String newUsername){
+        User usernameToUpdate = repository.findByUsername(oldUsername).get();
+        usernameToUpdate.setUsername(newUsername);
+        repository.save(usernameToUpdate);
+    }
+
+    @Transactional
+    public void updateEmail(String oldEmail, String newEmail){
+        User emailToUpdate = repository.findByEmail(oldEmail).get();
+        emailToUpdate.setEmail(newEmail);
+        repository.save(emailToUpdate);
+    }
 }

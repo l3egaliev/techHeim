@@ -41,7 +41,6 @@ public class AuthController {
         if(principal instanceof UserDetails) {
             UserDetailsImpl userDetails = (UserDetailsImpl) principal;
             result = userDetails.getUser();
-            System.out.println(userDetails.getUser().getUsername());
         }
         return result;
     }

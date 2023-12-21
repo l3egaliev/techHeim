@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="modal_username">
+    <div class="modal fade" id="edit-username" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="usernameLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body position-relative">
+                    <div class="flex-box justify-content-sm-between align-items-center">
+                        <h3 class="modal-title mb-5 text-center d-inline-block" id="usernameLabel">Edit your Username</h3>
+                        <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+
+
+                    <form th:action="@{/user/edit/username}"  th:method="post" th:object="${edit}" class="username-form">
+                        <input type="text" name="username" required class="form-control username mb-3" id="username" th:value="${user.username}">
+                        <input type="submit" class="btn btn-save btn-primary btn-submit text-center" name="submit" id="submit" value="Save">
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div th:fragment="modal_email">
+    <div class="modal fade" id="edit-email" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="emailLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body position-relative">
+                    <div class="flex-box justify-content-sm-between align-items-center">
+                        <h3 class="modal-title mb-5 text-center d-inline-block" id="emailLabel">Edit your E-mail Address</h3>
+                        <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+
+
+                    <form th:action="@{/user/edit/email}"  th:method="post" th:object="${edit}" class="email-form">
+                        <input type="email" name="email" required class="form-control email mb-3" id="email" th:value="${user.email}">
+                        <input type="submit" class="btn btn-save btn-primary btn-submit text-center" name="submit" value="Save">
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
