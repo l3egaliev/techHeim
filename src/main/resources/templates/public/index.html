@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Welcome</title>
     <div th:replace="~{fragments/links::css}"></div>
+    <link rel="stylesheet" href="/css/main.css">
 
     <!--    <link rel="" href="https://cdnjs.com/libraries/popper.js">-->
 </head>
@@ -12,6 +13,8 @@
 
             <div class="" th:replace="~{fragments/navbar::navbar}"></div>
             <div th:replace="~{fragments/modal-login::modal_login}"></div>
+            <div th:replace="~{fragments/main::header}"></div>
+            <div th:replace="~{fragments/main::new-products}"></div>
 
 
         </div>

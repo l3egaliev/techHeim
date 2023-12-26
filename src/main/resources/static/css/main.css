@@ -1,0 +1,370 @@
+a{
+    text-decoration: none;
+}
+
+.explore-btn{
+    background-color: #F45E0C;
+    color: #fff;
+    padding: 10px 50px;
+    border: 1px solid #F45E0C;
+    border-radius: 10px;
+}
+.explore-btn:hover{
+    background-color: #fff;
+    color: #F45E0C;
+}
+
+
+
+.header-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-main-left{
+    margin-right: 80px;
+}
+
+.header-main-right{
+    display: inline-block;
+    background-image: url("/images/main/header/header-laptop.svg");
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 728px;
+    height: 443px;
+}
+
+.main-title{
+    font-size: 64px;
+}
+
+.main-desc{
+    font-size: 32px;
+    margin-top: 50px;
+    margin-bottom: 110px;
+}
+
+.recommendations{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.r-element{
+    padding: 8px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 10px 10px 10px #7171711F;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.r-icon{
+    margin-bottom: 20px;
+    display: block;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 148px;
+    height: 148px;
+}
+
+.r-accessories{
+    background-image: url("/images/main/header/recommendations/r-accessories.svg");
+}
+
+.r-camera{
+    background-image: url("/images/main/header/recommendations/r-camera.svg");
+}
+
+.r-laptop{
+    background-image: url("/images/main/header/recommendations/r-laptop.svg");
+}
+
+.r-phone{
+    background-image: url("/images/main/header/recommendations/r-phone.svg");
+}
+
+.r-gaming{
+    background-image: url("/images/main/header/recommendations/r-gaming.svg");
+}
+
+.r-watch{
+    background-image: url("/images/main/header/recommendations/r-watch.svg");
+}
+
+
+.on-sale{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    padding: 44px;
+    background-color: #063A88;
+}
+
+.on-sale:before{
+    display: inline-block;
+    position: absolute;
+    content: '';
+    background-image: url("/images/main/header/sale/on-sale-img.svg");
+    width: 500px;
+    height: 435px;
+    background-repeat: no-repeat;
+    left: 0px;
+    top: 0px;
+
+}
+
+
+.sale-right{
+    margin-left: 80px;
+}
+
+.sale-left-title{
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sale-left-desc
+{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 90px;
+    font-weight: 300;
+    margin-left: 40px;
+}
+
+.sale-left-link{
+    color: #fff;
+    margin-right: 2px;
+    position: relative;
+    margin-left: 50px;
+    font-weight: 300;
+}
+
+.sale-left-link span{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("/images/arrow.svg");
+    background-position: center;
+    position: absolute;
+    top: 1px;
+}
+
+.sale-right, .new-products{
+    display: flex;
+    align-items: center;
+}
+
+.sale-element, .p-element{
+    padding: 8px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-right: 30px;
+    max-height: 240px;
+    max-width: 190px;
+}
+
+.sale-icon{
+    display: block;
+    width: 168px;
+    height: 146px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 12px;
+}
+
+.sale-mouse{
+    background-image: url("/images/main/header/sale/sale-mouse.svg");
+}
+
+.sale-last-price, .p-last-price{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+.sale-new-price, .p-reviews{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.sale-text{
+    max-width: 180px;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    line-height: 14px;
+}
+
+.sale-keyboard{
+    background-image: url("/images/main/header/sale/sale-keyboard.svg ");
+}
+
+.sale-watch{
+    background-image: url("/images/main/header/sale/sale-watch.svg");
+}
+
+.sale-laptop{
+    background-image: url("/images/main/header/sale/sale-laptop.svg");
+}
+
+.p-icon{
+    display: block;
+    width: 256px;
+    height: 190px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 16px;
+}
+
+.section-product{
+    margin-top: 100px;
+}
+
+.p-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p-title{
+    font-size: 32px;
+}
+
+.p-link{
+    color: #0c0c0c;
+    position: relative;
+}
+
+.p-link:hover{
+    color: #0C68F4;
+}
+
+.p-link span {
+    display: inline-block;
+    margin-left: 3px;
+    background-image: url("/images/main/new-products/arrow-black.svg");
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-position: center;
+    position: absolute;
+    bottom: -2px;
+}
+
+
+.new-products{
+    margin-top: 50px;
+}
+
+.p-element{
+    box-shadow: 0px 1px 7px 1px #c5c5c5;
+    min-height: 350px;
+    min-width: 290px;
+    align-items: center;
+    padding: 5px 15px;
+
+}
+
+.p-phone{
+    background-image: url("/images/main/new-products/p-phone.svg");
+}
+
+.p-laptop{
+    background-image: url("/images/main/new-products/p-laptop.svg");
+}
+
+.p-phone2{
+    background-image: url("/images/main/new-products/p-phone2.svg");
+}
+
+.p-vr{
+    background-image: url("/images/main/new-products/p-VR.svg");
+}
+
+.icon-line{
+    display: block;
+    background-image: url("/images/main/new-products/line.svg");
+    width: 256px;
+    height: 2px;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+
+.p-text{
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 260px;
+    line-height: 21px;
+}
+
+.p-reviews{
+    color: #063A88;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.star{
+    display: inline-block;
+    background-image: url("/images/main/new-products/star.svg");
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+
+.carousel-btns{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 30%;
+    opacity: 1;
+}
+
+.carousel-control-next-icon{
+    background-image: url("/images/main/new-products/arrow-circle-right.svg");
+}
+
+.carousel-control-prev-icon{
+    background-image: url("/images/main/new-products/arrow-circle-left.svg");
+}

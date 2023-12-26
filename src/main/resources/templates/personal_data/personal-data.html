@@ -12,6 +12,8 @@
         <div th:replace="~{fragments/breadcrumb::breadcrumb('Personal data')}"></div>
         <div th:replace="~{fragments/modal-userInfo::modal_username}"></div>
         <div th:replace="~{fragments/modal-userInfo::modal_email}"></div>
+        <div th:replace="~{fragments/modal-userInfo::modal_password}"></div>
+
 
         <div class="section-main">
             <div class="panel-nav" id="scroll-spy">
@@ -41,7 +43,7 @@
                 </div>
                 <div class="scroll-element security">
                     <span class="panel-icon security-icon"></span>
-                    <a href="" class="panel-btn security-btn">Security & access</a>
+                    <a href="#security" id="security-btn" onclick="showView('security-btn', 'security', 'security-icon')" class="panel-btn security-btn">Security & access</a>
                 </div>
                 <div class="scroll-element notification">
                     <span class="panel-icon notification-icon"></span>
@@ -53,7 +55,7 @@
                 </div>
                 <div class="scroll-element logout">
                     <span class="panel-icon logout-icon"></span>
-                    <a href="" class="panel-btn logout-btn">Logout</a>
+                    <a href="#logout" id="logout-btn" onclick="showView('logout-btn', 'logout', 'logout-icon')" class="panel-btn logout-btn">Logout</a>
                 </div>
             </div>
 
@@ -86,6 +88,29 @@
                     <div id="payments" style="display:none;">
                         <h2>Payments</h2>
                         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolores dolorum ea eius enim, id illo maxime molestiae necessitatibus quasi sed, unde? Consequuntur ipsam magni, possimus provident quisquam sit tempora!</div>
+                    </div>
+
+                    <div id="security" style="display: none;">
+                        <h1>Security settings</h1>
+                        <p style="color: #717171; font-size: 16px; margin-bottom: 25px">Change password</p>
+                        <div class="edit">
+                            <div id="change-password" class="">
+                                <label for="password" class="labels">Password</label>
+                                <div id="password" class="change-password">
+                                    <span class="change-password-icon"></span>
+                                    <span class="change-password-text">Password</span>
+                                    <button type="button" class="btn change-password-btn" id="changePasswordBtn" data-bs-toggle="modal" data-bs-target="#change-password"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="logout" style="display: none;">
+                        <h1>Delete account</h1>
+                        <p style="color: #717171; font-size: 16px; margin-bottom: 25px">Do you really want to delete your account?</p>
+                        <form th:action="@{/user/delete}" th:method="delete">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
                     </div>
                 </div>
             </div>

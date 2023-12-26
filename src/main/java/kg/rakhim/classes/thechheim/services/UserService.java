@@ -37,4 +37,5 @@ public class UserService {
         emailToUpdate.setEmail(newEmail);
         repository.save(emailToUpdate);
     }
+
 }

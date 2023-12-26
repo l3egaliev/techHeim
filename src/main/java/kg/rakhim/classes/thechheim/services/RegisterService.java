@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class RegisterService {
     private final UserRepository userRepository;
     private final PasswordEncoder encoder;
@@ -24,4 +25,24 @@ public class RegisterService {
         user.setRole("ROLE_USER");
         userRepository.save(user);
     }
+
+    @Transactional
+    public boolean changePassword(User user, String oldPassword, String newPassword){
+        boolean res = false;
+        User userToChange = userRepository.findByUsername(user.getUsername()).get();
+        if (encoder.matches(oldPassword, userToChange.getPassword())){
+            res = true;
+            userToChange.setPassword(encoder.encode(newPassword));
+            userRepository.save(userToChange);
+        }
+
+        return res;
+    }
+
+
+    @Transactional
+    public void delete(User user) {
+        userRepository.delete(user);
+    }
+
 }

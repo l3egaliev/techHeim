@@ -112,7 +112,7 @@ a{
     display: flex;
 }
 
-.edit-username, .edit-email{
+.edit-username, .edit-email, .change-password{
     display: flex;
     align-items: center;
     background-color: #F6F6F6;
@@ -131,7 +131,7 @@ a{
     margin-left: 10px;
 }
 
-.edit-username-icon, .edit-email-icon, .edit-username-btn, .edit-email-btn{
+.edit-username-icon, .edit-email-icon, .edit-username-btn, .edit-email-btn, .change-password-btn, .change-password-icon {
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -149,14 +149,18 @@ a{
     background-image: url("/images/profile.svg");
 }
 
-.edit-username-btn, .edit-email-btn{
+.change-password-icon{
+    background-image: url("/images/key.svg");
+}
+
+.edit-username-btn, .edit-email-btn, .change-password-btn{
     background-image: url("/images/edit-btn.svg");
     margin-right: 0px;
     cursor: pointer;
     border: none;
 }
 
-.edit-username-text, .edit-email-text{
+.edit-username-text, .edit-email-text, .change-password-text{
     margin-right: 150px;
     color: #717171;
 }

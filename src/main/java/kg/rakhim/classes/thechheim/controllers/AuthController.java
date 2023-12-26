@@ -7,13 +7,20 @@ import kg.rakhim.classes.thechheim.entities.User;
 import kg.rakhim.classes.thechheim.exceptions.RegisterException;
 import kg.rakhim.classes.thechheim.security.UserDetailsImpl;
 import kg.rakhim.classes.thechheim.services.RegisterService;
+import kg.rakhim.classes.thechheim.services.UserDetailsServiceImpl;
 import kg.rakhim.classes.thechheim.services.UserService;
 import kg.rakhim.classes.thechheim.utils.UserValidator;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.context.SecurityContextImpl;
 import org.springframework.security.core.parameters.P;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -22,6 +29,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.thymeleaf.spring6.context.SpringContextUtils;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Optional;
 
 @Controller
@@ -29,8 +38,10 @@ import java.util.Optional;
 public class AuthController {
     private final RegisterService service;
     private final UserValidator validator;
+    private final UserDetailsServiceImpl detailsService;
     private final ModelMapper mapper;
-
+    private final AuthenticationManager authenticationManager;
+    private Authentication authentication;
 
     @GetMapping("/userInfo")
     @ResponseBody
@@ -62,14 +73,11 @@ public class AuthController {
         if(br.hasErrors()){
             return "auth/registration";
         }
-
         service.register(user);
 
         return "redirect:/home";
+
     }
 
 
-    private User convertToUser(UserDTO dto){
-        return mapper.map(dto, User.class);
-    }
 }
