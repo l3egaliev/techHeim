@@ -1,130 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    <header th:fragment="header">
-        <div class="header-main">
-            <div class="header-main-left">
-                <h1 class="main-title">Tech Heim</h1>
-                <p class="main-desc">"Join the <span class="orange" style="color:#F45E0C;">digital revolution</span>"</p>
-                <a href="#" class="explore-btn">Explore More</a>
-            </div>
-            <div class="header-main-right"></div>
+<header th:fragment="header">
+    <div class="header-main">
+        <div class="header-main-left">
+            <h1 class="main-title">Tech Heim</h1>
+            <p class="main-desc">"Join the <span class="orange" style="color:#F45E0C;">digital revolution</span>"</p>
+            <a href="#" class="explore-btn">Explore More</a>
+        </div>
+        <div class="header-main-right"></div>
+    </div>
+
+    <div class="recommendations">
+        <div class="r-element">
+            <a href="#" class="r-icon r-accessories"></a>
+            <div class="r-text">Accessories</div>
         </div>
 
-        <div class="recommendations">
-            <div class="r-element">
-                <a href="#" class="r-icon r-accessories"></a>
-                <div class="r-text">Accessories</div>
-            </div>
-
-            <div class="r-element">
-                <a href="#" class="r-icon r-camera"></a>
-                <div class="r-text">Camera</div>
-            </div>
-
-            <div class="r-element">
-                <a href="#" class="r-icon r-laptop"></a>
-                <div class="r-text">Laptop</div>
-            </div>
-
-            <div class="r-element">
-                <a href="#" class="r-icon r-phone"></a>
-                <div class="r-text">Smart Phone</div>
-            </div>
-
-            <div class="r-element">
-                <a href="#" class="r-icon r-gaming"></a>
-                <div class="r-text">Gaming</div>
-            </div>
-
-            <div class="r-element">
-                <a href="#" class="r-icon r-watch"></a>
-                <div class="r-text">Smart watch</div>
-            </div>
+        <div class="r-element">
+            <a href="#" class="r-icon r-camera"></a>
+            <div class="r-text">Camera</div>
         </div>
 
-        <div class="on-sale">
-            <div class="sale-left">
-                <h3 class="sale-left-title">Products On Sale</h3>
-                <h6 class="sale-left-desc">Shop Now!</h6>
-                <a href="#" class="sale-left-link">view all <span></span></a>
-            </div>
-
-            <div class="sale-right position-relative">
-
-                            <div class="sale-element position-relative">
-                                <a href="#" class="sale-icon sale-mouse"></a>
-                                <div class="sale-text">Logitech G502 Gaming Mouse</div>
-                                <div class="sale-last-price"><del>$38.00</del></div>
-                                <div class="sale-new-price">$19.00</div>
-                            </div>
-                            <div class="sale-element position-relative">
-                                <a href="#" class="sale-icon sale-keyboard"></a>
-                                <div class="sale-text">NPET K10 Wired Gaming Keyboard, LED Backlit, Spill-Resistant Design</div>
-                                <div class="sale-last-price"><del>$49.00</del></div>
-                                <div class="sale-new-price">$34.30</div>
-                            </div>
-
-                            <div class="sale-element position-relative">
-                                <a href="#" class="sale-icon sale-watch"></a>
-                                <div class="sale-text">Apple Watch Series 7 (GPS, 41MM)</div>
-                                <div class="sale-last-price"><del>$289.00</del></div>
-                                <div class="sale-new-price">$231.20</div>
-                            </div>
-
-                            <div class="sale-element position-relative">
-                                <a href="#" class="sale-icon sale-laptop"></a>
-                                <div class="sale-text">Apple 2022 MacBook Air M2 Chip (8GB RAM, 256GB SSD)</div>
-                                <div class="sale-last-price"><del>$950.22</del></div>
-                                <div class="sale-new-price">$712.66</div>
-                            </div>
-                     </div>
-            </div>
-    </header>
-
-    <section th:fragment="new-products" class="section-product">
-        <div class="position-relative p-header">
-            <h2 class="p-title">New Products</h2>
-            <a href="#" class="p-link">View all <span></span></a>
+        <div class="r-element">
+            <a href="#" class="r-icon r-laptop"></a>
+            <div class="r-text">Laptop</div>
         </div>
-        <hr style="border: 1px solid #B4B4B4">
-        <div class="new-products">
-            <div class="p-element position-relative">
-                <div class="p-icon p-phone"></div>
-                <span class="icon-line"></span>
-                <p class="p-text">Iphone 14 promax 256 gig</p>
-                <div class="p-last-price"><del>$930.90</del></div>
-                <div class="p-reviews"><span class="star"></span>4.5</div>
-            </div>
 
-            <div class="p-element position-relative">
-                <div class="p-icon p-laptop"></div>
-                <span class="icon-line"></span>
-                <p class="p-text">Blackmagic Design Pocket Cinema Camera 6K Pro (Canon EF)</p>
-                <div class="p-last-price"><del>$2535.00</del></div>
-                <div class="p-reviews"><span class="star"></span>4.8</div>
-            </div>
+        <div class="r-element">
+            <a href="#" class="r-icon r-phone"></a>
+            <div class="r-text">Smart Phone</div>
+        </div>
 
-            <div class="p-element position-relative">
-                <div class="p-icon p-phone2"></div>
-                <span class="icon-line"></span>
-                <p class="p-text">SAMSUNG Galaxy S23 Ultra Cell Phone,256 GB</p>
-                <div class="p-last-price"><del>$1018.90</del></div>
-                <div class="p-reviews"><span class="star"></span>4.7</div>
-            </div>
+        <div class="r-element">
+            <a href="#" class="r-icon r-gaming"></a>
+            <div class="r-text">Gaming</div>
+        </div>
 
-            <div class="p-element position-relative">
-                <div class="p-icon p-vr"></div>
-                <span class="icon-line"></span>
-                <a href="#" class="p-text">VR VisionTech X1</a>
-                <div class="p-last-price"><del>$1399.00</del></div>
-                <div class="p-reviews"><span class="star"></span>3.9</div>
+        <div class="r-element">
+            <a href="#" class="r-icon r-watch"></a>
+            <div class="r-text">Smart watch</div>
+        </div>
+    </div>
+
+    <div class="on-sale">
+        <div class="sale-left">
+            <h3 class="sale-left-title">Products On Sale</h3>
+            <h6 class="sale-left-desc">Shop Now!</h6>
+            <a href="#" class="sale-left-link">view all <span></span></a>
+        </div>
+
+        <div th:replace="~{fragments/carousel::carousel}"></div>
+    </div>
+</header>
+
+<section th:fragment="new-products" class="section-product mt-80px">
+    <div class="position-relative p-header section-header">
+        <h2 class="p-title title">New Products</h2>
+        <a href="#" class="p-link view-all">View all <span></span></a>
+    </div>
+    <hr style="border: 1px solid #B4B4B4">
+    <div class="new-products default-card">
+        <div class="p-element default-card-el position-relative">
+            <div class="p-icon default-card-icon p-phone"></div>
+            <span class="icon-line"></span>
+            <a href="#" class="p-text default-card-text">Iphone 14 promax 256 gig</a>
+            <div class="p-last-price default-card-last-price">
+                <del>$930.90</del>
+            </div>
+            <div class="p-reviews default-card-reviews"><span class="star"></span>4.5</div>
+        </div>
+
+        <div class="p-element default-card-el position-relative">
+            <div class="p-icon default-card-icon p-laptop"></div>
+            <span class="icon-line"></span>
+            <a href="#" class="p-text default-card-text">Blackmagic Design Pocket Cinema Camera 6K Pro (Canon EF)</a>
+            <div class="p-last-price default-card-last-price">
+                <del>$2535.00</del>
+            </div>
+            <div class="p-reviews default-card-reviews"><span class="star"></span>4.8</div>
+        </div>
+
+        <div class="p-element default-card-el position-relative">
+            <div class="p-icon default-card-icon p-phone2"></div>
+            <span class="icon-line"></span>
+            <a href="#" class="p-text default-card-text">SAMSUNG Galaxy S23 Ultra Cell Phone,256 GB</a>
+            <div class="p-last-price default-card-last-price">
+                <del>$1018.90</del>
+            </div>
+            <div class="p-reviews default-card-reviews"><span class="star"></span>4.7</div>
+        </div>
+
+        <div class="p-element default-card-el position-relative">
+            <div class="p-icon p-vr default-card-icon"></div>
+            <span class="icon-line"></span>
+            <a href="#" class="p-text default-card-text">VR VisionTech X1</a>
+            <div class="p-last-price default-card-last-price">
+                <del>$1399.00</del>
+            </div>
+            <div class="p-reviews default-card-reviews"><span class="star"></span>3.9</div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="banner-el banner-el-left">
+            <div class="left-el1">
+                <h3 class="banner-title">Iphone <span style="color: #fff">15 Series</span></h3>
+                <div class="banner-img"></div>
+            </div>
+            <div>
+                <ul class="banner-days">
+                    <li class="days-el">
+                        <div>8</div>
+                        Days
+                    </li>
+
+                    <li class="days-el">
+                        <div>8</div>
+                        Days
+                    </li>
+
+                    <li class="days-el">
+                        <div>8</div>
+                        Days
+                    </li>
+
+                    <li class="days-el">
+                        <div>8</div>
+                        Days
+                    </li>
+                </ul>
+
+                <strong style="font-size: 20px; margin-bottom: 10px;">It feels good to be the first</strong>
+                <p class="banner-desc">Get ready for the future of smartphones.Experience innovation like never before.
+                    Stay tuned for the big iPhone 15 pre-sale.</p>
+
+                <a href="#" class="btn btn-primary banner-register">Register Now</a>
             </div>
         </div>
-    </section>
+        <div class="banner-el banner-el-right">
+            <h3 class="b-el-r-title">Play Station 5</h3>
+
+            <div class="ps5">
+                <div class="ps5-text">Digital Edition + 2TB</div>
+                <span class="ps5-img"></span>
+            </div>
+
+            <a href="#" class="btn btn-primary b-el-r-link">Buy Now</a>
+        </div>
+    </div>
+</section>
+
+<section th:fragment="best-sellers" class="best-sellers mt-80px">
+    <div class="section-header">
+        <h2 class="sellers-title title">Best Sellers</h2>
+        <a href="#" class="view-all sellers-link">view all <span></span></a>
+    </div>
+
+    <hr style="border: 1px solid #0c0c0c">
+
+    <div class="default-card">
+        <div class="sellers-element default-card-el position-relative">
+            <div class="sellers-headphone default-card-icon"></div>
+            <span class="icon-line"></span>
+            <a href="#" class="sellers-text default-card-text">EchoX Pro H900</a>
+            <div class="sellers-price default-card-last-price">$32.30</div>
+            <div class="sellers-reviews default-card-reviews"><span class="star"></span>4.1</div>
+        </div>
+        <div class="sellers-element default-card-el position-relative">
+            <div class="sellers-ps4 default-card-icon"></div>
+            <span class="icon-line"></span>
+            <a href="#" class="sellers-text default-card-text">Play Station 4 Pro 1Tb</a>
+            <div class="sellers-last-price default-card-last-price">
+                <del>$1000.00</del>
+            </div>
+            <div class="sellers-new-price">$980.00</div>
+            <div class="sellers-reviews default-card-reviews"><span class="star"></span>4.1</div>
+        </div>
+        <div class="sellers-element default-card-el position-relative">
+            <div class="sellers-laptop default-card-icon"></div>
+            <span class="icon-line"></span>
+            <a href="#" class="sellers-text default-card-text">Apple MacBook Air 15" w/ Touch ID (2023) - Space Grey
+                (Apple M2 Chip / 256GB SSD / 8GB RAM) - French</a>
+            <div class="sellers-price default-card-last-price">$1883.05</div>
+            <div class="sellers-reviews default-card-reviews"><span class="star"></span>4.5</div>
+        </div>
+        <div class="sellers-element default-card-el position-relative">
+            <div class="sellers-airpods default-card-icon"></div>
+            <span class="icon-line"></span>
+            <a href="#" class="sellers-text default-card-text">Airpods pro2</a>
+            <div class="sellers-last-price default-card-last-price">
+                <del>$285.08</del>
+            </div>
+            <div class="sellers-new-price">$274.04</div>
+            <div class="sellers-reviews default-card-reviews"><span class="star"></span>4.2</div>
+        </div>
+    </div>
+</section>
+<section th:fragment="top-brands" class="mt-80px">
+    <div class="section-header">
+        <h3 class="brand-title title">Top Brands</h3>
+        <a href="#" class="brand-link view-all">view all <span></span></a>
+    </div>
+    <hr style="border: 1px solid #0c0c0c">
+    <div class="brands">
+        <li class="apple brand-icon"></li>
+        <li class="sony brand-icon"></li>
+        <li class="samsung brand-icon"></li>
+        <li class="canon brand-icon"></li>
+        <li class="huawei brand-icon"></li>
+        <li class="lenovo brand-icon"></li>
+    </div>
+    <div class="watch-banner">
+        <div>
+            <h3 class="watch-banner-title">Smart Watch</h3>
+            <p class="watch-banner-text">Various designs and brands</p>
+            <a href="#" class="btn btn-danger watch-banner-link">view</a>
+        </div>
+    </div>
+</section>
+<section th:fragment="blogs" class="mt-80px">
+    <div class="section-header">
+        <h3 class="title">Our blogs</h3>
+        <a href="#" class="view-all">View all<span></span></a>
+    </div>
+    <hr style="border: 1px solid #0c0c0c">
+</section>
+
+
 </body>
 </html>

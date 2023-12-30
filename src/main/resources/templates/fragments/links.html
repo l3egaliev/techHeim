@@ -8,14 +8,21 @@
         <link rel="stylesheet" href="/css/authentication.css">
         <link rel="stylesheet" href="/css/home.css">
         <link rel="icon" th:replace="~{fragments/favicon::favicon}" href="">
+        <!-- slick css  -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     </div>
 </head>
 <body>
 
-    <div th:fragment="js">
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.min.js}"></script>
-        <script src="/js/main.js"></script>
-    </div>
+<div th:fragment="js">
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.min.js}"></script>
+    <script src="/js/main.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</div>
 </body>
 </html>

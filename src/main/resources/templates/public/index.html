@@ -5,23 +5,28 @@
     <title>Welcome</title>
     <div th:replace="~{fragments/links::css}"></div>
     <link rel="stylesheet" href="/css/main.css">
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap}"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/css/carousel.css">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}">
 
     <!--    <link rel="" href="https://cdnjs.com/libraries/popper.js">-->
 </head>
 <body>
-        <div class="container">
+<div class="container">
 
-            <div class="" th:replace="~{fragments/navbar::navbar}"></div>
-            <div th:replace="~{fragments/modal-login::modal_login}"></div>
-            <div th:replace="~{fragments/main::header}"></div>
-            <div th:replace="~{fragments/main::new-products}"></div>
+    <div class="" th:replace="~{fragments/navbar::navbar}"></div>
+    <div th:replace="~{fragments/modal-login::modal_login}"></div>
+    <div th:replace="~{fragments/main::header}"></div>
+    <div th:replace="~{fragments/main::new-products}"></div>
+    <div th:replace="~{fragments/main::best-sellers}"></div>
+    <div th:replace="~{fragments/main::top-brands}"></div>
+    <div th:replace="~{fragments/main::blogs}"></div>
+</div>
 
 
-        </div>
-
-
-
-            <div th:replace="~{fragments/links::js}"></div>
+    <div th:replace="~{fragments/links::js}"></div>
+    <script src="/js/carousel.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,31 @@
+.slider{
+    max-width: 800px;
+    margin-left: 100px;
+}
+
+.slider-btns{
+    position: relative;
+}
+.prev, .next{
+    position: absolute;
+    background-color: transparent;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: none;
+    bottom: -155px;
+    right: 20px;
+}
+
+.prev{
+    background-image: url("/images/main/new-products/arrow-circle-left.svg");
+}
+
+.next{
+    background-image: url("/images/main/new-products/arrow-circle-right.svg");
+    right: -10px;
+
+}

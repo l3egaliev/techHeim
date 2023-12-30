@@ -2,6 +2,15 @@ a{
     text-decoration: none;
 }
 
+li{
+    list-style: none;
+}
+
+.mt-80px{
+    margin-top: 80px;
+}
+
+
 .explore-btn{
     background-color: #F45E0C;
     color: #fff;
@@ -104,7 +113,7 @@ a{
 .on-sale{
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     position: relative;
     padding: 44px;
     background-color: #063A88;
@@ -124,9 +133,10 @@ a{
 }
 
 
-.sale-right{
-    margin-left: 80px;
+.sale-left{
+    margin-right: 90px;
 }
+
 
 .sale-left-title{
     font-size: 24px;
@@ -161,12 +171,12 @@ a{
     top: 1px;
 }
 
-.sale-right, .new-products{
+.sale-right, .default-card{
     display: flex;
     align-items: center;
 }
 
-.sale-element, .p-element{
+.sale-element, .default-card-el{
     padding: 8px 18px;
     display: flex;
     flex-direction: column;
@@ -193,13 +203,13 @@ a{
     background-image: url("/images/main/header/sale/sale-mouse.svg");
 }
 
-.sale-last-price, .p-last-price{
+.sale-last-price, .default-card-last-price{
     position: absolute;
     bottom: 5px;
     left: 5px;
 }
 
-.sale-new-price, .p-reviews{
+.sale-new-price, .default-card-reviews{
     position: absolute;
     bottom: 5px;
     right: 5px;
@@ -225,42 +235,33 @@ a{
     background-image: url("/images/main/header/sale/sale-laptop.svg");
 }
 
-.p-icon{
-    display: block;
-    width: 256px;
-    height: 190px;
-    background-color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-bottom: 16px;
-}
+
 
 .section-product{
     margin-top: 100px;
 }
 
-.p-header{
+.section-header{
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.p-title{
+.title{
     font-size: 32px;
 }
 
-.p-link{
+.view-all{
     color: #0c0c0c;
     position: relative;
 }
 
-.p-link:hover{
+.view-all:hover{
     color: #0C68F4;
 }
 
-.p-link span {
+.view-all span {
     display: inline-block;
     margin-left: 3px;
     background-image: url("/images/main/new-products/arrow-black.svg");
@@ -273,17 +274,29 @@ a{
 }
 
 
-.new-products{
+
+.default-card{
     margin-top: 50px;
 }
 
-.p-element{
+.default-card-el{
     box-shadow: 0px 1px 7px 1px #c5c5c5;
     min-height: 350px;
     min-width: 290px;
     align-items: center;
     padding: 5px 15px;
+}
 
+
+.default-card-icon{
+    display: block;
+    width: 256px;
+    height: 190px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 16px;
 }
 
 .p-phone{
@@ -312,15 +325,20 @@ a{
 }
 
 
-.p-text{
+.default-card-text{
     margin-bottom: 50px;
     font-size: 16px;
     font-weight: 300;
     max-width: 260px;
     line-height: 21px;
+    color: #0c0c0c;
 }
 
-.p-reviews{
+.default-card-text:hover{
+    color: #0C68F4;
+}
+
+.default-card-reviews{
     color: #063A88;
     font-weight: 500;
     font-size: 18px;
@@ -341,30 +359,229 @@ a{
     margin-bottom: 2px;
 }
 
-
-.carousel-btns{
+.banner{
+    margin-top: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.banner-el{
+    padding: 24px;
+    max-width: 760px;
+    border-radius: 8px;
+}
+
+.banner-el-left {
+    background: linear-gradient(140deg, #1975B9, #1FB6CF, #B0E9C9);
+    display: flex;
+    align-items: center;
+    max-height: 420px;
+}
+
+.left-el1{
+    margin-right: 35px;
+}
+
+.banner-img{
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/images/main/new-products/banner-img.svg");
+    display: inline-block;
+    width: 378px;
+    height: 282px;
+    margin-top: 60px;
+}
+
+.banner-days{
+    display: flex;
+    align-items: center;
+}
+
+.days-el{
+    padding: 4px;
+    text-align: center;
+    border: 1px solid #0c0c0c;
+    border-radius: 7px;
+}
+
+.days-el div{
+    font-weight: 500;
+}
+
+.days-el:not(:last-child){
+    margin-right: 16px;
+}
+
+.banner-desc{
+    font-size: 16px;
+    color: #2d2d2d;
+    font-weight: 400;
+    margin: 10px 0 25px 10px;
+}
+
+.banner-register{
+    margin-left: 25px;
+}
+
+.banner-el-right{
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/images/main/new-products/banner-right.svg");
+    display: inline-block;
+    min-width: 444px;
+    height: 420px;
+    margin-left: 24px;
+    padding: 32px 20px;
+}
+
+.b-el-r-title{
+    color: #FCC870;
+    font-size: 24px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.ps5{
+    display: flex;
+    align-items: center;
+}
+
+.ps5-img{
+    display: inline-block;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/images/main/new-products/banner-ps5.svg");
+    width: 210px;
+    height: 169px;
+}
+
+.ps5-text{
+    color: #063A88;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.b-el-r-link, .banner-register{
+    font-size: 16px;
+    margin-left: 30px;
+    padding: 10px 25px;
+}
+
+.best-sellers{
+    margin-top: 80px;
+}
+
+.sellers-headphone{
+    background-image: url("/images/main/best-sellers/headphone.svg");
+}
+
+.sellers-ps4{
+    background-image: url("/images/main/best-sellers/ps4.svg");
+}
+
+.sellers-laptop{
+    background-image: url("/images/main/best-sellers/laptop.svg");
+}
+
+.sellers-airpods{
+    background-image: url("/images/main/best-sellers/airpods.svg");
+}
+
+.sellers-last-price{
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.sellers-new-price{
+    position: absolute;
+    font-size: 17px;
+    bottom: 0px;
+    left: 4px;
+}
+
+            /*Section Top Brands*/
+.brands{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-icon, .watch-banner{
+    display: inline-block;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 20px;
+    width: 50px;
+    height: 155px;
+}
+
+.apple{
+    background-image: url("/images/main/top-brands/apple.svg");
+}
+
+.sony{
+    background-image: url("/images/main/top-brands/sony.svg");
+    width: 200px;
+}
+.samsung{
+    background-image: url("/images/main/top-brands/samsung.svg");
+    width: 214px;
+}
+.canon{
+    background-image: url("/images/main/top-brands/canon.svg");
+    width: 175px;
+}
+
+.huawei{
+    background-image: url("/images/main/top-brands/huawei.svg");
+    width: 90px;
+}
+
+.lenovo{
+    background-image: url("/images/main/top-brands/lenovo.svg");
+    width: 152px;
+}
+
+.watch-banner{
+    background-image: url("/images/main/top-brands/banner.svg");
+    width: 100%;
+    height: 420px;
+    border-radius: 0;
     position: relative;
 }
 
-.carousel-control-next, .carousel-control-prev{
+.watch-banner div{
     position: absolute;
-    bottom: -20px;
-    right: 0;
+    top: 150px;
+    left: 100px;
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon{
-    width: 32px;
-    height: 32px;
-    border-radius: 30%;
-    opacity: 1;
+.watch-banner-title{
+    color: #fff;
+    font-size: 44px;
 }
 
-.carousel-control-next-icon{
-    background-image: url("/images/main/new-products/arrow-circle-right.svg");
+.watch-banner-text{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+.watch-banner-link{
+    color: #0c0c0c;
+    margin-left: 100px;
 }
 
-.carousel-control-prev-icon{
-    background-image: url("/images/main/new-products/arrow-circle-left.svg");
-}
+
+
+

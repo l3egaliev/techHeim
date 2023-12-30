@@ -48,6 +48,15 @@ document.addEventListener('DOMContentLoaded', function (){
     }
 
     navOnClick()
+
+    const product_elements = document.getElementsByClassName('p-element')
+    const product_line = document.getElementsByClassName('icon-line')
+    for(let i = 0;i<product_elements.length;i++){
+        product_elements.item(i).addEventListener('click', function (){
+            product_elements.item(i).style.boxShadow = '0px 1px 16px 1px #b6b6b6'
+            product_line.item(i).style.backgroundImage = '/images/main/new-products/hover-line.svg'
+        })
+    }
 })
 
 function navOnClick(){
