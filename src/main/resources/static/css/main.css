@@ -748,3 +748,47 @@ li{
     right: 20px;
     bottom: 20px;
 }
+
+.services{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-el{
+    display: flex;
+    align-items: center;
+}
+
+.service-el span{
+    display: inline-block;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.icon-tech{
+    background-image: url("/images/main/services/tech.svg");
+    width: 40px;
+    height: 34px;
+}
+
+.icon-shipping{
+    background-image: url("/images/main/services/shipping.svg");
+    width: 62px;
+    height: 31px;
+}
+
+.icon-guarantee{
+    background-image: url("/images/main/services/guarantee.svg");
+    width: 40px;
+    height: 34px;
+}
+
+.icon-support{
+    background-image: url("/images/main/services/support.svg");
+    width: 40px;
+    height: 34px;
+}
