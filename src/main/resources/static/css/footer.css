@@ -1,0 +1,157 @@
+.footer{
+    padding: 30px 100px 0 100px;
+    background: radial-gradient(farthest-corner at bottom, #179BD7 -80%, #021736 33%);
+
+}
+
+.main-footer{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.footer-title{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.footer-link{
+    font-size: 16px;
+    font-weight: 300;
+    color: #CBCBCB;
+    margin-bottom: 8px;
+}
+
+.footer-link:hover{
+    color: #fff;
+}
+
+.footer-link-contacts{
+    display: flex;
+    align-items: center;
+}
+
+.footer-icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 4px;
+}
+
+.footer-cal{
+    background-image: url("/images/footer/call-calling.svg");
+}
+
+.footer-location{
+    background-image: url("/images/footer/location.svg");
+}
+
+.footer-email{
+    background-image: url("/images/footer/sms-edit.svg");
+}
+
+.footer-form{
+    position: relative;
+    margin-top: 16px;
+    margin-bottom:  16px;
+}
+
+.footer-input{
+    position: relative;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 12px 37px;
+    color: #f9f9f9;
+}
+
+.footer-input::placeholder{
+    color: #f9f9f9;
+}
+
+.footer-form-btn{
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    border: 0;
+    background-image: url("/images/footer/form-btn.svg");
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.footer-form-user{
+    background-image: url("/images/footer/user.svg");
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+}
+
+.social-icon{
+    display: inline-block;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+
+.facebook{
+    background-image: url("/images/footer/Facebook.svg");
+}
+
+.twitter{
+    background-image: url("/images/footer/twitter.svg");
+}
+
+.instagram{
+    background-image: url("/images/footer/Instagram.svg");
+}
+
+.youtube{
+    background-image: url("/images/footer/Youtube.svg");
+    margin-right: 0;
+}
+
+.questions, .back-to-top{
+    display: inline-block;
+    position: absolute;
+    background-color: #AECDFB;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    right: 30px;
+}
+
+.back-to-top{
+    background-image: url("/images/footer/arrow-up.svg");
+    right: -70px;
+    bottom: -20px;
+}
+
+.questions{
+    background-image: url("/images/footer/questions.svg");
+    background-size: 20px;
+}
