@@ -1,3 +1,6 @@
+a{
+    text-decoration: none;
+}
 .footer{
     padding: 30px 100px 0 100px;
     background: radial-gradient(farthest-corner at bottom, #179BD7 -80%, #021736 33%);
@@ -9,6 +12,7 @@
     align-items: start;
     justify-content: space-between;
     padding: 40px 0;
+    position: relative;
 }
 
 .footer-title{
@@ -142,7 +146,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    right: 30px;
+    right: -70px;
 }
 
 .back-to-top{
@@ -154,4 +158,84 @@
 .questions{
     background-image: url("/images/footer/questions.svg");
     background-size: 20px;
+}
+
+.footer-payments{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.footer-payments a{
+    display: inline-block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 32px;
+    height: 24px;
+}
+
+.footer-payments a:not(:last-child){
+    margin-right: 4px;
+}
+
+.paypal{
+    background-image: url("/images/footer/paypal.svg");
+}
+
+.american-express{
+    background-image: url("/images/footer/american express.svg");
+}
+
+.master-card{
+    background-image: url("/images/footer/master card.svg");
+}
+
+.visa{
+    background-image: url("/images/footer/visa.svg");
+}
+
+.policy{
+    background-color: #021736;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    color: #CBCBCB;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.copyright span{
+    display: inline-block;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    background-image: url("/images/footer/copyright.svg");
+    margin-right: 5px;
+}
+
+.settings a{
+    color: #CBCBCB;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.settings a:hover{
+    color: #f9f9f9;
+}
+
+.settings a:not(:last-child){
+    margin-right: 48px;
 }
