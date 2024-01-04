@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <div th:replace="~{fragments/links::css}"></div>
+</head>
+<body>
+<div class="container">
+    <div th:replace="~{fragments/navbar::navbar}"></div>
+    <div th:replace="~{fragments/modal-login::modal_login}"></div>
+    <div th:replace="~{fragments/breadcrumb::breadcrumb('Blogs')}"></div>
+
+</div>
+<div th:replace="~{fragments/links::js}"></div>
+</body>
+</html>

@@ -3,18 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Products</title>
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
-    <link rel="stylesheet" href="/css/authentication.css">
-    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/product.css">
-    <link rel="icon" th:replace="~{fragments/favicon::favicon}" href="">
     <link rel="stylesheet" th:replace="~{fragments/links::css}" href="">
 </head>
 <body>
         <div class="container-lg">
             <div th:replace="~{fragments/navbar::navbar}"></div>
             <div th:replace="~{fragments/modal-login::modal_login}"></div>
-
             <div th:replace="~{fragments/breadcrumb::breadcrumb('Products')}"></div>
 
             <ul class="nav category-nav justify-content-center">
@@ -105,10 +100,7 @@
             </div>
         </div>
         <div th:replace="~{fragments/footer::footer}"></div>
-
-        <script src="https://unpkg.com/@popperjs/core@2"></script>
-        <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.min.js}"></script>
-        <script src="/js/main.js"></script>
+        <div th:replace="~{fragments/links::js}"></div>
         <script src="/js/product.js"></script>
 </body>
 </html>

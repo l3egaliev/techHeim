@@ -8,8 +8,8 @@
     <div th:fragment = "breadcrumb(path)">
         <nav style="--bs-breadcrumb-divider: '>';" class="mt-3" aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a th:href="@{/home}">Home</a></li>
-                <li class="breadcrumb-item" aria-current="page"><a href="" class="active" th:text="${path}"></a></li>
+                <li class="breadcrumb-item"><a class="text-black" th:href="@{/home}">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a class="text-decoration-underline" href="" th:text="${path}"></a></li>
             </ol>
         </nav>
     </div>
