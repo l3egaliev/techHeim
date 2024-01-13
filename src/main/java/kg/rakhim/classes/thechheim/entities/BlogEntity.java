@@ -1,20 +1,16 @@
 package kg.rakhim.classes.thechheim.entities;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import jdk.jfr.Timespan;
-import jdk.jfr.Timestamp;
 import kg.rakhim.classes.thechheim.entities.blog_elements.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.format.annotation.DateTimeFormat;
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name="blogs")
+@Table(name="blog")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,25 +21,26 @@ public class BlogEntity {
     private Integer id;
 
     @Column(name = "title")
-    @NotNull
+    @NonNull
     private String title;
 
-    @OneToMany(mappedBy = "blog")
-    private List<BlogParagraphs> description;
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<BlogParagraph> paragraphs = new ArrayList<>();
 
-    @OneToMany(mappedBy = "blog")
-    private List<BlogCategories> categories;
+    @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<BlogCategory> categories = new ArrayList<>();
 
-    @OneToMany(mappedBy = "blog")
-    private List<BlogComments> comments;
+    @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<BlogComment> comments = new ArrayList<>();
 
-    @OneToMany(mappedBy = "blog")
-    private List<BlogLikes> likes;
+    @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<BlogLike> likes = new ArrayList<>();
 
-    @OneToMany(mappedBy = "blog")
-    private List<BlogTags> tags;
+    @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<BlogTag> tags = new ArrayList<>();
 
     @Column(name = "created_at")
-    @Timestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    @CreationTimestamp
     private Date created_at;
 }
