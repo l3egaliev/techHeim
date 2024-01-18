@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', function (){
 
 function allProducts(response){
 
-
-
     for(let i = 0;i < response.length; i++){
         const products = document.querySelector('.products')
 

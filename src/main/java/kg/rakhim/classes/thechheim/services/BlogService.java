@@ -27,6 +27,7 @@ public class BlogService {
         List<BlogDTO> result = new ArrayList<>();
         for(BlogEntity entity:entities){
             BlogDTO dto = BlogDTO.builder()
+                    .id(entity.getId())
                     .title(entity.getTitle())
                     .categories(entity.getCategories())
                     .comments(entity.getComments())
@@ -46,6 +47,7 @@ public class BlogService {
             return new BlogDTO();
         } else {
             dto = BlogDTO.builder()
+                    .id(entity.get().getId())
                     .title(entity.get().getTitle())
                     .categories(entity.get().getCategories())
                     .comments(entity.get().getComments())

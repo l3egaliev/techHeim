@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class BlogDTO {
+    private Integer id;
     private String title;
     private List<BlogParagraph> paragraphs = new ArrayList<>();
     private List<BlogCategory> categories = new ArrayList<>();

@@ -35,19 +35,18 @@ CREATE TABLE blog_like(
 );
 
 INSERT INTO blog(title)
-    VALUES ('Iphone 14 pro');
+    VALUES ('Meta Platforms plans to release free software that...');
 INSERT INTO blog_paragraph(paragraph, blog_id)
-    VALUES('first description', 1);
+    VALUES('The parent company of Facebook, Meta Platforms, is introducing software to help developers', 2);
 INSERT INTO blog_category(name, blog_id)
-    VALUES ('mobile phone', 1);
-INSERT INTO blog_comment(comment, blog_id)
-    VALUES ('cool', 1);
+    VALUES ('companies', 2);
 INSERT INTO blog_like(count, blog_id)
-    VALUES (10, 1);
+    VALUES (100, 2);
 INSERT INTO blog_tag(tag, blog_id)
-    VALUES ('Iphone 14', 1);
-INSERT INTO blog_tag(tag, blog_id)
-VALUES ('Iphone', 1);
+    VALUES ('meta', 2);
+
+SELECT title FROM blog
+WHERE title LIKE('Meta%');
 
 SELECT blog_category.name from blog
     JOIN blog_category ON blog.blog_id = blog_category.blog_id

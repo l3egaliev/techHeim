@@ -1,18 +1,14 @@
 package kg.rakhim.classes.thechheim.controllers;
 
 import kg.rakhim.classes.thechheim.dto.BlogDTO;
-import kg.rakhim.classes.thechheim.entities.BlogEntity;
 import kg.rakhim.classes.thechheim.services.BlogService;
-import kg.rakhim.classes.thechheim.utils.Converter;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
+
 
 @Controller
 @RequestMapping("/blogs")
@@ -20,21 +16,23 @@ import java.util.List;
 public class BlogController {
     private final BlogService blogService;
 
-    @GetMapping
-    public String blogsMain(){
+
+    @GetMapping()
+    public String allBlogs(Model model){
+        model.addAttribute("blogs", blogService.getAll());
         return "blogs/blogs";
     }
 
-    @ResponseBody
-    @GetMapping("/all")
-    public List<BlogDTO> allBlogs(){
-        return blogService.getAll();
-    }
+//    @GetMapping("/{id}")
+//    @ResponseBody
+//    public BlogDTO getBlog(@PathVariable("id")int id){
+//        return blogService.getOne(id);
+//    }
 
-    @ResponseBody
     @GetMapping("/{id}")
-    public BlogDTO getBlog(@PathVariable("id")int id){
-        return blogService.getOne(id);
+    public String blogPage(@PathVariable("id") int id, Model model){
+        model.addAttribute("blog", blogService.getOne(id));
+        return "blogs/blog";
     }
 
 }

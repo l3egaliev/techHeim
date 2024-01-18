@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div th:replace="~{fragments/links::css}"></div>
+</head>
+<body>
+    <div class="container">
+        <div th:replace="~{fragments/navbar::navbar}"></div>
+        <div th:replace="~{fragments/modal-login::modal_login}"></div>
+        <div th:replace="~{fragments/breadcrumb::breadcrumb('Blog')}"></div>
+        <div th:if="${blog != null}">
+            <h2 th:text="${blog.getTitle()}"></h2>
+            <div class="d-flex">
+                <div style="width: 900px; height: 400px; margin-right: 30px;
+                    background-color: #717171"></div>
+                <div th:each="category : ${blog.categories}">
+                    <div class="fw-bold mb-3">Categories</div>
+                    <div th:text="${category.name}"></div>
+                    <div class="mt-3 mb-3"></div>
+                </div>
+            </div>
+            <div th:each="p : ${blog.paragraphs}" class="mt-3">
+                <p th:text="${p.paragraph}"></p>
+                <div class="mb-3 mt-5"></div>
+            </div>
+        </div>
+    </div>
+
+<div th:replace="~{fragments/links::js}"></div>
+</body>
+</html>

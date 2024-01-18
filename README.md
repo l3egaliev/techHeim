@@ -8,25 +8,6 @@
 * Maven 3+
 * Spring Boot 3+
 
-## Установка
-
-1. Клонируйте репозиторий:
-
-    ```bash
-    git clone https://github.com/l3egaliev/techheim.git
-    ```
-
-2. Перейдите в директорию проекта:
-
-    ```bash
-    cd techheim
-    ```
-
-3. Соберите проект:
-
-    ```bash
-    mvn clean install
-    ```
 
 ## Конфигурация
 
@@ -80,5 +61,13 @@ spring.datasource.password=postgres
 2. **Или скомпилируйте JAR-файл и запустите его:**
    * mvn clean install
    * java -jar target/ваш-файл.jar
+                                            
 
-Приложение будет доступно по адресу http://localhost:8082.
+
+
+## Роли
+
+| Роли      | Доступы                                          |
+|-----------|--------------------------------------------------|
+| ROLE_USER | Может заказать товары, управлять своими данными. |
+
