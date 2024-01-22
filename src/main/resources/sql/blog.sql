@@ -49,4 +49,15 @@ SELECT title FROM blog
 WHERE title LIKE('Meta%');
 
 SELECT blog_category.name from blog
-    JOIN blog_category ON blog.blog_id = blog_category.blog_id
+    JOIN blog_category ON blog.blog_id = blog_category.blog_id;
+
+
+ALTER TABLE blog ADD COLUMN likes int;
+
+CREATE TABLE blog_user (
+    user_id BIGINT,
+    blog_id BIGINT,
+    PRIMARY KEY (user_id, blog_id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (blog_id) REFERENCES blog(blog_id)
+);

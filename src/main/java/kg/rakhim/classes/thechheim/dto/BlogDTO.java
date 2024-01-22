@@ -18,6 +18,6 @@ public class BlogDTO {
     private List<BlogParagraph> paragraphs = new ArrayList<>();
     private List<BlogCategory> categories = new ArrayList<>();
     private List<BlogComment> comments = new ArrayList<>();
-    private List<BlogLike> likes = new ArrayList<>();
+    private Integer likes;
     private List<BlogTag> tags = new ArrayList<>();
 }

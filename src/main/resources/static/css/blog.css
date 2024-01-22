@@ -1,0 +1,53 @@
+.tag{
+    color: #0C68F4;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: 1px solid #0C68F4;
+    border-radius: 5px;
+}
+
+.comments-box{
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #EDEDED;
+}
+
+.comment-count{
+    margin-right: 20px;
+}
+
+.comment-count-icon, .like-count-icon{
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 3px;
+
+}
+
+.comment-count-icon{
+    background-image: url("/images/blogs/comment.svg");
+}
+.like-count-icon{
+    background-image: url("/images/blogs/like.svg");
+    border: none;
+}
+
+.like-count-icon:hover{
+    background-color: #0C68F4;
+}
+
+.counter{
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+
+.comment-count-text, .like-count-text{
+    margin-right: 3px;
+}

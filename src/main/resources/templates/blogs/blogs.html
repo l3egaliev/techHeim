@@ -11,10 +11,9 @@
     <div th:replace="~{fragments/modal-login::modal_login}"></div>
     <div th:replace="~{fragments/breadcrumb::breadcrumb('Blogs')}"></div>
     <div class="blogs" th:each="blog : ${blogs}">
-        <a th:href="'/blogs/'+${blog.id}" target="_blank" th:text="${blog.getTitle()}"></a>
+        <a th:href="'/blogs/'+${blog.id}" th:text="${blog.getTitle()}"></a>
         <p th:text="${blog.paragraphs[0].paragraph}"></p>
     </div>
-
 </div>
 <!--<div th:replace="~{fragments/footer::footer}"></div>-->
 <div th:replace="~{fragments/links::js}"></div>
